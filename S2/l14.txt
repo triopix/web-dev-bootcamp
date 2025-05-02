@@ -1,0 +1,17 @@
+The Request/Response Cycle:
+
+- server's don't respond with a beautiful web page lol
+- servers respond with INSTRUCTIONS
+- browser's job is to RENDER the content (take code from HTTP response)
+
+IKEA Instructions (not the final product): (server response)
+Your Browser: (build the Sofa! from instructions)
+
+When you do "view source" on right-click, you see the instructions!
+Browser takes those and renders them into a beautiful web page!
+
+HTML/CSS/JS are the instructions from (web-server)
+
+- HTML: structure of the page
+- CSS: style of the page
+- JS: behavior of the page

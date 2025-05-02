@@ -1,0 +1,39 @@
+The Web
+
+- WWW (World Wide Web) is an information system
+- documents/data/resources available OVER the net
+- identified by URL's (uniform resource locators)
+- documents transferred by HTTP
+
+internet does more than just the web...
+the web is one portion that goes over those cables...
+
+HTTP:
+
+- Hypertext Transfer Protocol - set of RULES for communication
+- foundation of the communication of data on the web
+- Request; "I would like this information please"
+- Response; "Ok here you go!"
+
+- BROWSER; client that requests information
+- SERVER; computer that serves the information      
+
+WEB SERVER:
+
+- computers that run special software
+- they STORE web pages
+- they LISTEN for requests from browsers
+- they respond to requests with the requested information
+
+CLIENT:
+
+- computer that REQUESTS information
+- they run special software (browser)
+- they send REQUESTS to servers
+- they RECEIVE responses from servers
+- they DISPLAY the information to the USER
+- they allow the USER to INTERACT with the INFORMATION
+
+
+Definition:
+Web is a system of servers and clients that communicate with each other using the HTTP protocol. 

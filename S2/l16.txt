@@ -1,0 +1,5 @@
+"The Purple Dino Danced"
+
+-> purple = "adjective" = CSS
+-> dino = "noun" = HTML
+-> danced = "verb" = JavaScript

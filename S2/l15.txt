@@ -1,0 +1,12 @@
+Frontend (restaurant):
+
+- stuff that runs IN THE BROWSER
+- HTML/CSS/JS is the *code (client side) sent FROM THE SERVER
+- frameworks (React, Angular, Vue) are the tools that help you
+
+Backend (kitchen):
+
+- stuff that runs ON THE SERVER
+- many different languages (python, java, c++, Java, even JS, ruby)
+- frameworks (flask, django, spring, Node.js, express) are the tools to help
+- database (MongoDB, MySQL, PostgreSQL, SQLite) - to STORE data

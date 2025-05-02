@@ -1,0 +1,34 @@
+What is the internet?
+
+"A global network of networks"
+"Many computers connected together over a network"
+
+Routers (instead of connecting every computer)
+- operator in a call central
+- connect every computer to that central place
+- router's job is to provide information to everyone
+
+Individual computers are identified by IP Adresses
+No one computer needs to know about other computers
+
+"Network of networks"
+
+Data makes its way over cables!
+Under-sea cables, etc...
+Sent over pulses of light...
+
+------------------------------------------------------------
+
+Infrastructure that makes EVERYTHING possible:
+
+- email
+- the web (our focus)
+- file sharing
+- online gaming
+- streaming services
+
+take-away: bunch of connected computers, enabling us to share everything
+
+definition: 
+
+Global network of networks, or a bunch of interconnected computers with unique respective IP Adresses that communicate via the TCP/IP protocol

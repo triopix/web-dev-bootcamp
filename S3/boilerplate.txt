@@ -1,0 +1,26 @@
+HTML requires boilerplate code for every document
+
+<!DOCTYPE html> "flag that says WE ARE USING HTML5 - latest features"
+
+"Root element of the HTML document"
+"All tags must descend from this element"
+<html>
+</html>
+
+"information about your webpage goes here (metadata)"
+<head>
+</head>
+
+"Title of the webpage - appears in the browser tab"
+<title>
+</title>
+
+"Body of the webpage - where the content goes"
+<body>
+</body>
+
+---------------------------------------------------------------------------------------------------------------------------
+
+"Tags for example are <h1>, </h1>, and the contents inside are called "element contents"
+"Them TOGETHER are called an element
+
