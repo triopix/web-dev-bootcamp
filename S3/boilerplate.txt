@@ -19,8 +19,8 @@ HTML requires boilerplate code for every document
 <body>
 </body>
 
----------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------
 
 "Tags for example are <h1>, </h1>, and the contents inside are called "element contents"
-"Them TOGETHER are called an element
+"Them TOGETHER are called an element"
 
