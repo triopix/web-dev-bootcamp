@@ -1,0 +1,1 @@
+File Paths (very important!): https://desktop.arcgis.com/en/arcmap/latest/tools/supplement/pathnames-explained-absolute-relative-unc-and-url.htm#:~:text=Relative%20path&text=and%20a%20double%20dot%20(..,dot%20represents%20the%20current%20directory.
