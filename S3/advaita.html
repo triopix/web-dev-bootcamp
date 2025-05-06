@@ -6,84 +6,113 @@
     <title>Advaita Vedanta</title>
   </head>
   <body>
-    <!-- Headings!-->
+    <!--Nav bar - functions also like a <div>-->
+    <nav>
+      <ul>
+        <li>
+          <!--Anchor Tags <a ...> -->
+          <!--href is an "attribute"-->
+          <a href="https://en.wikipedia.org/wiki/Advaita_Vedanta"
+            >Wikipedia Ref.</a
+          >
+        </li>
+        <li>
+          <a href="about.html">About Me</a>
+        </li>
+      </ul>
+    </nav>
+    <hr />
+    <!--Main content - just like a <div> to group things together-->
+    <main>
+      <!-- Headings!-->
 
-    <!--You should never have any heading tag, by itself
+      <!--You should never have any heading tag, by itself
     Example: if <h3> exists, <h2> and <h1> must exist
     Don't use them just for size!
     -->
+      <header>
+        <!--At most one <h1> tag (main heading)-->
+        <h1>Advaita Vedanta</h1>
 
-    <!--At most one <h1> tag (main heading)-->
-    <h1>Advaita Vedanta</h1>
+        <!--Images! Check filesystem to get correct path!-->
+        <!--NOT RECOMMEND (width, height) as attr.-->
+        <img
+          src="../assets/nondual.jpg"
+          alt="A single droplet of water above a ripplling water surface"
+          width="764"
+          height="512"
+        />
+      </header>
+      <!--Thematic Break - can style to change-->
+      <hr />
 
-    <!--Images! Check filesystem to get correct path!-->
-    <!--NOT RECOMMEND (width, height) as attr.-->
-    <img src="../assets/nondual.jpg" alt="A single droplet of water above a ripplling water surface" 
-    width="764"
-    height="512"/>
-  
-    <!-- Paragraphs! -->
-    <!-- <p> tag represents a paragraph. 
+      <!-- Paragraphs! -->
+      <!-- <p> tag represents a paragraph. 
     Can be a normal 'paragraph' or 
     a structured grouping of content
     {images, fields, videos, etc...}
     -->
 
-    <h2>Basic Ideology</h2>
-    <p>
-      Vedānta) is a Hindu tradition of Brahmanical textual exegesis and
-      philosophy, and a monastic institutional tradition nominally related to
-      the Daśanāmi Sampradaya and propagated by the Smarta tradition. Its core
-      tenet is that jivatman, the individual experiencing self, is ultimately
-      pure awareness mistakenly identified with body and the senses,[2] and
-      non-different ("na aparah") from Ātman/Brahman, the highest Self or
-      Reality. Advaita Vedanta (/ʌdˈvaɪtə vɛˈdɑːntə/; Sanskrit: अद्वैत वेदान्त,
-      IAST: Advaita
-    </p>
+      <!--Section semantic element, like a div to break content up-->
+      <section>
+        <h2>Basic Ideology</h2>
+        <p>
+          Vedānta) is a Hindu tradition of Brahmanical textual exegesis and
+          philosophy, and a monastic institutional tradition nominally related
+          to the Daśanāmi Sampradaya and propagated by the Smarta tradition. Its
+          core tenet is that jivatman, the individual experiencing self, is
+          ultimately pure awareness mistakenly identified with body and the
+          senses,[2] and non-different ("na aparah") from Ātman/Brahman, the
+          highest Self or Reality. Advaita Vedanta (/ʌdˈvaɪtə vɛˈdɑːntə/;
+          Sanskrit: अद्वैत वेदान्त, IAST: Advaita
+        </p>
 
-    <h2>Definition</h2>
-    <p>
-      The term Advaita literally means <b>"non-secondness"</b>, but is usually
-      rendered as "nonduality".[6][7] This refers to the Oneness of Brahman,[8]
-      the only real Existent, and is often equated with monism.[note 2]
-    </p>
-
-    <!--Lists-->
-    <!-- 
+        <h2>Definition</h2>
+        <p>
+          The term Advaita literally means <b>"non-secondness"</b>, but is
+          usually rendered as "nonduality".<sup
+            ><a href="https://www.google.ca">[6][7]</a></sup
+          >
+          This refers to the Oneness of Brahman,[8] the only real Existent, and
+          is often equated with monism.<sub>[note 2]</sub>
+        </p>
+      </section>
+      <!--Lists-->
+      <!-- 
     
     Two types:
 
     1. Unordered List
     2. Numbered List     
     -->
-    <h2>Precepts of Vedanta</h2>
-    <ol>
-      <!--Example of elements-->
-      <li><h4>Daily Affirmations</h4></li>
-      <ul>
-        <li>I am other than name form and action</li>
-        <li>My nature is ever free</li>
-      </ul>
+      <h2>Precepts of Vedanta</h2>
+      <ol>
+        <!--Example of elements-->
+        <li><h4>Daily Affirmations</h4></li>
+        <ul>
+          <li>I am other than name form and action</li>
+          <li>My nature is ever free</li>
+        </ul>
 
-      <li><h4>Omnipresent Truths</h4></li>
-      <ul>
-        <li>I am Self, the supreme unconditional Brahman</li>
-        <li>I am Pure Awareness, always non-dual</li>
-      </ul>
-    </ol>
-
-    <!--Anchor Tags <a ...> -->
-    <!--href is an "attribute"-->
-    <h2>Links</h2>
-    <ul>
-      <li>
-        <a href="https://en.wikipedia.org/wiki/Advaita_Vedanta"
-          >Wikipedia Ref.</a
-        >
-      </li>
-      <li>
-        <a href="about.html">About Me</a>
-      </li>
-    </ul>
+        <li><h4>Omnipresent Truths</h4></li>
+        <ul>
+          <!--Span here to treat it differently (generic container -inline level)-->
+          <!--Inspect element shows you a container (to style)-->
+          <li>
+            I am <span class="highlight">Self</span>, the supreme unconditional
+            Brahman
+          </li>
+          <li>I am Pure Awareness, always non-dual</li>
+        </ul>
+      </ol>
+    </main>
+    <hr />
+    <footer>
+      <p>
+        &copy; 2023 Advaita Vedanta. All rights reserved.
+        <br />
+        <a href="https://www.google.ca">Contact Us Here</a>
+      </p>
+    </footer>
   </body>
 </html>

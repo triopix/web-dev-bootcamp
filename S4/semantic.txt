@@ -1,0 +1,44 @@
+SEMANTIC MARKUP ("adding meaning to markup"):
+
+- no new features, instead more MEANING
+
+- "SEMANTIC" - relating to meaning in language
+- "what purpose or role does that HTML element serve?"
+- "what is the meaning of that HTML element?"
+
+- elements that function like divs
+- give more "meaning" to the structure of a document
+- categorizing pieces of markup
+
+- screen readers need headers/footers
+- makes markup more readable/navigable
+- still functions like a div/span, but with more meaning
+- semantic elements are more descriptive
+
+Instead of <div> or <span>, use more specific elements like:
+
+- <section> - for sections of a document
+
+- <article> - for self-contained content
+
+ - independently reusable/distributable like a weather widget (reusable)
+ - can be reused in different contexts
+ - <header> - for the header of a section or article
+ - <footer> - for the footer of a section or article
+
+- <header> - for the header of a document
+- <footer> - for the footer of a document
+- <nav> - for navigation links
+- <aside> - for sidebars, callout boxes, etc.
+- <figure> - for images, diagrams, etc.
+- <figcaption> - caption for a figure
+- <main> - the main content of the document
+- <time> - a specific time or date
+- <mark> - highlighted text
+- <address> - contact information
+- <progress> - a progress bar
+- <meter> - a measurement within a range
+- <summary> - a summary of a details element
+...
+
+

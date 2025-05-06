@@ -1,0 +1,29 @@
+What is HTML5?
+
+- LATEST EVOLUTION of the STANDARD that defines HTML
+- markup language for documents DESIGNED to be displayed in a WEB BROWSER
+- REFERS to a LARGER SET of technologies (HTML5 and friends)
+- new stuff for CSS, upgrades for performance, 3D Grahpics support, etc...
+
+HTML STANDARD:
+
+- document that defines how HTML works
+- browsers have to do the lifting and actually IMPLETMENT the standard
+
+
+HTML5 is a WORKING DRAFT
+HTML5 is a LIVING standard
+
+it is not a new version of HTML
+HTML5 is a new standard that is being developed
+you don't "upgrade" to HTML5    
+
+<!DOCTYPE html>
+- you merely tell the browser what markup it should expect
+- this is the DOCTYPE declaration
+- tells the browser what version of HTML the page is written in
+- the DOCTYPE declaration is NOT an HTML tag
+- it is an instruction to the web browser
+- it is NOT case sensitive
+- it is NOT required to be in the HTML document
+- it is NOT required to be the first thing in the document

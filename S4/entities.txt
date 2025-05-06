@@ -1,0 +1,13 @@
+HTML Entites:
+
+- start with an "&" and end with a ";"
+- used to represent special characters in HTML
+- used to display characters - not easily typed on keyboard
+- characters that are not part of ASCII Character Set
+- copyright symbol ©
+- registered trademark symbol ®
+- non-breaking space &nbsp;
+- don't use reserved characters in HTML (use entity codes instead)
+
+
+
