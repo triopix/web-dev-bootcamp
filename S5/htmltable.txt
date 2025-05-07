@@ -1,0 +1,24 @@
+HTML Tables:
+
+What are Tables?
+
+- structured sets of data made up of rows and columns
+- great way of displaying data clearly
+
+Early Usage:
+
+- used to create page layouts
+- not recommended anymore
+
+Lots of Elements!
+
+- you will use about 5-10 Elements
+
+-------------------------------------------------------------------------
+
+Table Elements:
+
+- <table> - table element
+- <tr> - table row
+- <th> - table header
+- <td> - table data (cell)

@@ -1,0 +1,7 @@
+Create Well-Formatted HTML Tables
+Understand when to use tables and when not to use them
+Explain the role of a FORM element
+Utilize a variety of FORM controls
+Define complex HTML Forms
+Add HTML5 Form Validations
+Ensure Accessibility of our forms
