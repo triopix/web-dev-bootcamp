@@ -1,0 +1,89 @@
+CSS is a language
+
+- used for describing presentation of a html document
+- Cascading Style Sheets
+- easy but a lot of properties to deal with
+
+CSS Rules (almost everything follows this pattern):
+
+selector {
+    property: value;
+}
+
+example:
+
+# make all h2 elements red, and 20px
+h2 {
+    color: red;
+    font-size: 20px;
+}
+
+# MAKE ALL IMG ELEMENTS 100px by 100px
+img {
+    width: 100px;
+    height: 100px;
+}
+
+-------------------------------------------
+Inline Styles:
+
+- you can directly add styles to an element using <style>
+- this is not recommended, but it works
+
+The <style> element:
+- impossible to share styles between documents
+- not recommended either
+
+External StyleSheet:
+- write styles in .css file
+- include it using a <link> tag in <head> of document
+- this is the recommended method
+- you can share styles between documents
+---------------------------------------------------------
+COLORS IN CSS:
+
+- 140 named colors recognized by all browsers 
+- there are over 16 million colors
+- you can use RGB, HEX, HSL, and color names
+- there are 3 different colors of light (red, green, blue)
+
+RGB:
+- red, green, blue
+- each color can be between 0 and 255
+- example: rgb(255, 0, 0) is red
+- example: rgb(0, 255, 0) is green
+- example: rgb(0, 0, 255) is blue
+- example: rgb(255, 255, 255) is white
+- example: rgb(0, 0, 0) is black
+- example: rgb(255, 255, 0) is yellow
+- example: rgb(0, 255, 255) is cyan
+- example: rgb(255, 0, 255) is magenta
+
+HEXAEDECIMAL (base 16):
+- decimal: 0-255
+- hex: 00-FF (A, B, C, D, E, F)
+- 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+
+example: F = 15
+- there are channels, __ __ __
+- example: #FF0000 is red
+
+UNITS:
+
+Relative units include:
+- EM
+- REM 
+- VH 
+- VW
+- %
+- AND MORE!
+
+Absolute units include:
+- PX
+    - most commonly used absolute unit 
+    - 1px doesn't generally = width of 1px
+    - not recommended for responsive websites
+- PT  
+- CM
+- IN 
+- MM 

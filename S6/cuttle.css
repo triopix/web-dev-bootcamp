@@ -1,0 +1,32 @@
+h1 {
+    /*text align doesn't move the entire h1 around*/
+    /*only says "how is text aligned in element"*/
+    text-align: center; 
+    
+    /*if you have a font-weight that doesn't exist*/
+    /*browser just picks the closest existing one*/
+    font-weight: normal;
+
+    text-decoration: red wavy underline;
+    letter-spacing: 10px;   
+
+    /*don't always use px*/
+    font-size: 100px;    
+
+    /*font family = not as simple*/
+    /*depends on built-in fonts*/
+    font-family: monospace;
+}
+
+p {
+    /* font-weight: bold; */
+    text-decoration: rgb(118, 118, 170) dotted underline;
+    line-height: 2;
+
+}
+
+a {
+    /*no decoration defaults on links anymore*/
+    text-decoration: none;
+}
+

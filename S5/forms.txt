@@ -1,0 +1,41 @@
+Forms in HTML:
+
+- the <form> element itself is a shell
+- <form> doesn't have any visual impact
+- We then fill the form with a collection of inputs, checkboxes, radio buttons, etc...
+
+<form> representation:
+
+- "document section containing interactive controls for submitting information"
+
+- action attribute specifies WHERE the form data should be sent
+
+- method attr. specifies which HTTP method should be used
+
+--------------------------------------------------------------------
+<input> element:
+
+- can create a variety of different controls
+- 20+ possible types of inputs (date pickers, checkboxes, radio buttons, etc...)
+- "type" attr. specifies the type of input
+- changing type dramtically changes the behavior of the input
+- input is a self-closing tag
+------------------------------------------------------------------
+<label> element:
+
+- very imporant for accessibility (screen readers)
+- represents a caption for an item in a user interface
+- direct connection between some input and a label
+
+- give id for the input
+- give for attribute for the label
+
+so the whole relationships is: for: "cheese" where id="cheese"
+-------------------------------------------------------------------
+name attribute:
+
+- the name is what the server uses to identify the data (being sent)
+-------------------------------------------------------------------
+checkboxes:
+
+- check if its checked to begin with

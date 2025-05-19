@@ -1,0 +1,14 @@
+Form Validation/Constraints:
+
+(required) attribute:
+---------------------
+- The field must be filled out.
+- The field cannot be empty.
+- The field must contain a value.
+
+(Pattern) attribute:
+---------------------
+- The field must match a specific pattern.
+- The field must conform to a specific format.
+- The field must follow a specific regex pattern.
+

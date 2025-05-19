@@ -1,0 +1,367 @@
+:root {
+    --font-primary: 'Noto Serif JP', serif;
+    --color-washi-bg: #f9f8f5;       /* A touch warmer, refined washi */
+    --color-sumi-deep: #282828;   /* Deep sumi for primary text */
+    --color-sumi-medium: #404040; /* For slightly softer body text */
+    --color-sumi-text: #333333; /* Slightly adjusted for intro text clarity */
+    --color-stone-muted: #787878; /* Muted grey for secondary elements */
+    --color-clay-accent: #bc5f48; /* Earthy, sophisticated clay red */
+    --color-gold-line: #b8a890;    /* Pale, aged gold for lines */
+
+    --text-line-height-main: 1.8;
+    --text-line-height-compact: 1.7;
+    --letter-spacing-body: 0.035em;
+    --letter-spacing-headings: 0.05em;
+
+    --space-unit: 0.25rem; /* Base unit for spacing for consistency */
+    --space-xs: calc(var(--space-unit) * 2);  /* 0.5rem */
+    --space-sm: calc(var(--space-unit) * 4);  /* 1rem */
+    --space-md: calc(var(--space-unit) * 6);  /* 1.5rem */
+    --space-lg: calc(var(--space-unit) * 8);  /* 2rem */
+    --space-xl: calc(var(--space-unit) * 12); /* 3rem */
+    --space-xxl: calc(var(--space-unit) * 16);/* 4rem */
+
+    --animation-duration: 0.45s;
+    --animation-ease: cubic-bezier(0.35, 0.8, 0.25, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%; /* Base 16px */
+}
+
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    line-height: var(--text-line-height-main);
+    background-color: var(--color-washi-bg);
+    color: var(--color-sumi-medium);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: var(--letter-spacing-body);
+    padding-top: 70px; /* Sticky header height */
+
+    background-image:
+        linear-gradient(to bottom, rgba(0,0,0,0.003) 0%, rgba(0,0,0,0.01) 50%, rgba(0,0,0,0.003) 100%),
+        linear-gradient(45deg, rgba(0,0,0,0.008) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.008) 75%, rgba(0,0,0,0.008)),
+        linear-gradient(-45deg, rgba(0,0,0,0.008) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.008) 75%, rgba(0,0,0,0.008));
+    background-size: 100% 2px, 25px 25px, 25px 25px;
+}
+
+.page-content-area {
+    max-width: 780px; /* Slightly more compact width */
+    margin: 0 auto var(--space-xxl) auto;
+    padding: 0 var(--space-lg);
+}
+
+/* Sticky Header */
+.site-global-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(249, 248, 245, 0.88); /* Washi bg with more refined transparency */
+    backdrop-filter: blur(12px) saturate(110%);
+    -webkit-backdrop-filter: blur(12px) saturate(110%);
+    border-bottom: 1px solid rgba(184, 168, 144, 0.4); /* Lighter gold line */
+    height: 70px;
+    transition: box-shadow var(--animation-duration) var(--animation-ease);
+}
+.site-global-header.scrolled-past-hero {
+     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.header-inner-container {
+     max-width: 820px;
+     margin: 0 auto;
+     padding: 0 var(--space-lg);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 100%;
+}
+.header-site-title a {
+     font-size: 1.2rem; /* Compact but clear */
+     font-weight: 600;
+     color: var(--color-sumi-deep);
+     text-decoration: none;
+     letter-spacing: 0.05em;
+     transition: color var(--animation-duration) var(--animation-ease);
+}
+ .header-site-title a:hover {
+     color: var(--color-clay-accent);
+ }
+ .site-main-navigation ul {
+    list-style: none;
+    display: flex;
+ }
+ .site-main-navigation li {
+     margin-left: var(--space-lg); /* More compact nav spacing */
+ }
+ .site-main-navigation a {
+     font-size: 0.9rem;
+     font-weight: 500;
+     color: var(--color-sumi-medium);
+     text-decoration: none;
+     letter-spacing: 0.04em;
+     padding: var(--space-xs) 0; /* Tighter vertical padding */
+     position: relative;
+     transition: color var(--animation-duration) var(--animation-ease);
+ }
+ .site-main-navigation a::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; /* Closer underline */
+      left: 0;
+      width: 0%;
+      height: 1px; /* Finer underline */
+      background-color: var(--color-clay-accent);
+      transition: width 0.35s var(--animation-ease);
+ }
+ .site-main-navigation a:hover,
+ .site-main-navigation a.current-section-link {
+     color: var(--color-sumi-deep);
+ }
+ .site-main-navigation a:hover::after,
+ .site-main-navigation a.current-section-link::after {
+      width: 100%;
+ }
+
+/* Sections: Compacted Vertical Rhythm & Animation */
+.main-content-section {
+    margin-bottom: var(--space-xxl); /* Slightly reduced from 6.5rem */
+    padding-top: var(--space-xl); /* Reduced scroll target offset */
+    opacity: 0;
+    transform: translateY(25px); /* Reduced initial offset for animation */
+    transition: opacity 0.7s var(--animation-ease),
+                transform 0.7s var(--animation-ease);
+}
+.main-content-section.visible-in-viewport { opacity: 1; transform: translateY(0); }
+.main-content-section:last-of-type { margin-bottom: 0; }
+
+.content-section-heading {
+    font-size: 1.45rem; /* Slightly smaller but still impactful */
+    font-weight: 600;
+    color: var(--color-sumi-deep);
+    margin-bottom: var(--space-xl); /* Reduced from 3.25rem */
+    padding-bottom: var(--space-md); /* Reduced padding */
+    border-bottom: 1px solid var(--color-gold-line);
+    letter-spacing: var(--letter-spacing-headings);
+    position: relative;
+}
+ .content-section-heading::before { /* Refined stamp/mark */
+    content: '章'; /* Sho - Chapter/Section */
+    font-size: 0.7em;
+    font-weight: 400;
+    color: var(--color-clay-accent);
+    opacity: 0.65; /* Slightly more visible */
+    position: absolute;
+    left: -24px; /* Adjusted */
+    top: 5px;    /* Adjusted for font size and alignment */
+    transform: rotate(-10deg); /* Slightly more pronounced rotation */
+ }
+
+/* About Section - Compacted Profile Integration */
+#introduction-area .intro-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-xl); /* Slightly reduced gap */
+}
+.intro-image-container {
+    flex-shrink: 0;
+    width: 140px; /* Slightly smaller profile image */
+    border: 1px solid var(--color-gold-line);
+    padding: 6px;
+    background-color: var(--color-washi-bg);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transform: rotate(-1.5deg); /* Consistent slight tilt */
+    transition: transform 0.3s var(--animation-ease);
+}
+.intro-image-container:hover { transform: rotate(0.5deg) scale(1.02); }
+
+.author-profile-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1; /* Square for a slightly different feel */
+    object-fit: cover;
+    border: 1px solid rgba(184, 168, 144, 0.7); /* Gold line with some alpha */
+    display: block; /* Removes any potential space below image */
+}
+.intro-text p { font-size: 1.025rem; color: var(--color-sumi-text); margin-bottom: var(--space-md); }
+
+
+/* Text & Link Styling - Refined */
+p { font-size: 1rem; line-height: var(--text-line-height-compact); color: var(--color-sumi-medium); margin-bottom: var(--space-md); }
+strong, b { font-weight: 600; color: var(--color-sumi-deep); }
+a.inline-text-link {
+    color: var(--color-clay-accent);
+    text-decoration: none;
+    padding-bottom: 0px; /* Align with text baseline */
+    border-bottom: 1px solid rgba(188, 95, 72, 0.5);
+    background-image: linear-gradient(to top, rgba(188, 95, 72, 0.08) 0%, rgba(188, 95, 72, 0.08) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0%;
+    transition: color 0.3s ease, border-color 0.3s ease, background-size 0.3s var(--animation-ease);
+}
+a.inline-text-link:hover {
+    color: var(--color-washi-bg);
+    border-bottom-color: var(--color-clay-accent);
+    background-size: 100% 100%;
+}
+
+/* Central Philosophy/Quote - COMPACTED */
+.statement-of-philosophy {
+    font-size: 1.15rem; /* More compact size */
+    font-weight: 500;
+    color: var(--color-sumi-deep);
+    margin: var(--space-xl) auto; /* Reduced top/bottom margin */
+    padding: var(--space-md) var(--space-lg) var(--space-md) var(--space-xl); /* Compacted padding */
+    border-left: 3px solid var(--color-clay-accent);
+    background-color: rgba(249, 248, 245, 0.6); /* Subtle distinction, slightly more alpha */
+    max-width: 90%;
+    position: relative;
+}
+ .statement-of-philosophy::before { /* More integrated quote mark */
+    content: '“';
+    font-size: 2.5em; /* Smaller quote mark */
+    font-weight: 700;
+    color: var(--color-gold-line);
+    opacity: 0.7;
+    position: absolute;
+    left: var(--space-sm); /* Closer */
+    top: -5px; /* Adjusted for visual balance */
+ }
+
+
+/* Portfolio / Works List */
+.portfolio-showcase-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xxl); /* Maintained substantial gap for focus on items */
+}
+.portfolio-item-card {
+     opacity: 0; transform: translateY(15px);
+     transition: opacity 0.5s var(--animation-ease) 0.1s, transform 0.5s var(--animation-ease) 0.1s;
+}
+.portfolio-item-card.visible-in-viewport { opacity: 1; transform: translateY(0); }
+
+.project-image-container {
+    margin-bottom: var(--space-md);
+    background-color: #fff; /* Kept white for clean presentation of images */
+    padding: 10px;
+    border: 1px solid rgba(220, 212, 202, 0.8); /* Lighter border */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.025), 0 8px 25px rgba(0,0,0,0.05);
+    overflow: hidden;
+    position: relative; /* For pseudo-element */
+    transition: transform 0.4s var(--animation-ease), box-shadow 0.4s var(--animation-ease);
+}
+ /* Removed the inner box-shadow pseudo-element for a cleaner look, personal preference */
+ .project-image-container:hover {
+     transform: scale(1.015); /* More subtle scale */
+     box-shadow: 0 6px 12px rgba(0,0,0,0.04), 0 12px 30px rgba(0,0,0,0.08);
+ }
+.project-image-container img,
+.project-image-container .placeholder-content-image {
+    display: block; width: 100%; height: auto; max-height: 550px;
+    object-fit: cover; background-color: var(--color-washi-bg);
+    border: 1px solid rgba(229, 224, 216, 0.7);
+    transition: transform 0.7s var(--animation-ease);
+}
+.project-image-container:hover img,
+.project-image-container:hover .placeholder-content-image { transform: scale(1.035); }
+
+.portfolio-item-card h3 {
+    font-size: 1.25rem; /* Compacted title size */
+    font-weight: 600; color: var(--color-sumi-deep); margin-bottom: var(--space-xs);
+}
+ .portfolio-item-card h3 a {
+     color: inherit; text-decoration: none; border-bottom: none;
+     background-image: linear-gradient(to right, var(--color-clay-accent), var(--color-clay-accent));
+     background-position: 0% 100%; background-repeat: no-repeat;
+     background-size: 0% 1px; /* Thinner hover underline */
+     transition: background-size 0.3s var(--animation-ease), color 0.3s ease;
+ }
+ .portfolio-item-card h3 a:hover { background-size: 100% 1px; color: var(--color-clay-accent); }
+
+.portfolio-item-card .description-text { font-size: 0.95rem; color: var(--color-sumi-medium); margin-bottom: var(--space-md); }
+
+.technology-tags { margin-top: var(--space-sm); display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.tag-item {
+    font-family: var(--font-primary); font-size: 0.8rem; font-weight: 500;
+    color: var(--color-stone-muted); background-color: transparent;
+    border: 1px solid var(--color-gold-line); padding: 0.25rem 0.6rem; /* Tighter padding */
+    border-radius: 3px; letter-spacing: 0.05em; text-transform: uppercase;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+}
+.tag-item:hover {
+    color: var(--color-washi-bg); background-color: var(--color-clay-accent);
+    border-color: var(--color-clay-accent); transform: translateY(-1px);
+}
+ .tag-icon-placeholder::before {
+    content: "※"; /* Komejirushi mark - a common Japanese symbol for notation */
+    font-size: 0.8em; /* Adjusted size */
+    margin-right: 0.4em;
+    opacity: 0.7;
+    color: inherit; /* Inherits color from tag-item, changes on hover */
+ }
+
+
+/* Contact Section */
+.contact-action-button {
+    display: inline-block; margin-top: var(--space-sm); padding: 0.7rem 1.8rem; /* Compacted padding */
+    font-size: 1.05rem; font-weight: 500; color: var(--color-washi-bg);
+    background-color: var(--color-clay-accent); border: 1px solid var(--color-clay-accent);
+    border-radius: 3px; text-decoration: none; letter-spacing: 0.04em;
+    transition: background-color 0.3s ease, transform 0.3s var(--animation-ease), box-shadow 0.3s ease;
+    box-shadow: 0 3px 10px rgba(188, 95, 72, 0.2);
+}
+.contact-action-button:hover {
+    background-color: #a9543c; /* Slightly darker clay on hover */
+    border-color: #a9543c;
+    transform: translateY(-2px) scale(1.015); box-shadow: 0 5px 15px rgba(188, 95, 72, 0.3);
+}
+
+/* Footer */
+.site-footer-final {
+    text-align: center; margin-top: var(--space-xxl); /* Reduced top margin */
+    padding: var(--space-xl) 0 var(--space-lg) 0; /* Compacted padding */
+    border-top: 1px solid rgba(184, 168, 144, 0.6); /* Gold line alpha */
+    font-size: 0.875rem; color: var(--color-stone-muted);
+}
+.footer-social-media-links a {
+     color: var(--color-stone-muted);
+     border-bottom: 1px dotted var(--color-gold-line); margin: 0 var(--space-xs);
+     text-decoration:none; padding-bottom: 0px;
+     transition: color 0.3s ease, border-color 0.3s ease;
+}
+.footer-social-media-links a:hover { color: var(--color-clay-accent); border-bottom-color: var(--color-clay-accent); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    body { padding-top: 65px; } .site-global-header { height: 65px; }
+    .page-content-area { padding: 0 var(--space-md); }
+    .header-inner-container { padding: 0 var(--space-md); }
+    .header-site-title a { font-size: 1.1rem; }
+    .site-main-navigation li { margin-left: var(--space-md); }
+    .main-content-section { margin-bottom: var(--space-xl); padding-top: var(--space-lg); }
+    .content-section-heading { font-size: 1.3rem; margin-bottom: var(--space-lg); }
+    #introduction-area .intro-grid { flex-direction: column; align-items: center; text-align: center;}
+    .intro-image-container { margin-bottom: var(--space-lg); width: 160px; transform: rotate(0deg); /* Straighten image on smaller centered layout */}
+    .intro-image-container:hover { transform: scale(1.03); }
+    .content-section-heading::before { left: -20px; top: 3px; }
+}
+
+@media (max-width: 600px) {
+    html { font-size: 93.75%; } /* Base 15px */
+     .site-main-navigation { display: none; } /* Hiding nav on very small screens, consider a hamburger menu if nav is critical */
+     .content-section-heading::before { left: -15px; font-size: 0.65em; top: 4px;} /* Closer for mobile stamp */
+    .statement-of-philosophy { font-size: 1.1rem; padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-lg); }
+    .portfolio-item-card h3 { font-size: 1.15rem; }
+    .technology-tags { justify-content: center; }
+}

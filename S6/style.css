@@ -1,0 +1,30 @@
+/*color element - changes text color*/
+h2 {
+  color: indianred;
+  background-color: lightblue;
+}
+
+button {
+  color: magenta;
+  background-color: lightsalmon;
+}
+
+p {
+  color: blue;
+}
+
+a {
+  color: rgb(89, 235, 227);
+  /*background is supposed to be a different property*/
+  /*a certain color can be one of the values for that*/
+  background: orange
+}
+
+/*check the color checker*/
+body {
+  color: lch(37.41% 75.31 320.92);
+}
+
+/*in company, you are expected to conform to color pallette*/
+/*you will have color codes ready to go*/
+

@@ -21,7 +21,23 @@
         </li>
       </ul>
     </nav>
+
+    <section>
+      <!--Little search bar functionality for reddit!-->
+      <!--Mind the name for the input, based on server requirements-->
+      <form action="https://www.reddit.com/r/AdvaitaVedanta/search">
+        <label for="search">Search Reddit: </label>
+        <input
+          id="search"
+          type="text"
+          name="q"
+          placeholder="r/AdvaitaVedanta"
+        />
+      </form>
+    </section>
+
     <hr />
+
     <!--Main content - just like a <div> to group things together-->
     <main>
       <!-- Headings!-->
@@ -39,8 +55,8 @@
         <img
           src="../assets/nondual.jpg"
           alt="A single droplet of water above a ripplling water surface"
-          width="764"
-          height="512"
+          width="382"
+          height="256"
         />
       </header>
       <!--Thematic Break - can style to change-->
@@ -99,7 +115,7 @@
               <td>Vedas</td>
               <td>4 Books</td>
             </tr>
-            <tr>  
+            <tr>
               <td>Upanishads</td>
               <td>108 scriptures</td>
             </tr>
@@ -139,9 +155,93 @@
           <li>I am Pure Awareness, always non-dual</li>
         </ul>
       </ol>
+      <!--Favourite Philospher-->
+      <h2>Favourite Philosopher</h2>
+      <form action="https://en.wikipedia.org/wiki">
+        <div>
+          <input
+            type="radio"
+            name="search"
+            value="Swami Vivekananda"
+            id="svk"
+          />
+          <label for="svk">Swami Vivekananda</label>
+        </div>
+        <br />
+        <div>
+          <input
+            type="radio"
+            name="search"
+            value="Sri Ramana Maharshi"
+            id="srm"
+          />
+          <label for="srm">Sri Ramana Maharshi</label>
+        </div>
+        <br />
+        <div>
+          <input type="radio" name="search" value="Shankaracharya" id="sas" />
+          <label for="sas">Sri Adi Shankaracharya</label>
+        </div>
+        <br />
+        <div>
+          <input
+            type="radio"
+            name="search"
+            value="Sri Nisargadatta Maharaj"
+            id="snm"
+          />
+          <label for="snm">Sri Nisargadatta Maharaj</label>
+        </div>
+        <br />
+        <div>
+          <input type="radio" name="search" value="Sri Ramakrishna" id="srp" />
+          <label for="srp">Sri Ramakrishna Paramahamsa</label>
+        </div>
+        <br />
+        <div>
+          <input type="radio" name="search" value="Sri Aurobindo" id="sa" />
+          <label for="sa">Sri Aurobindo</label>
+        </div>
+        <br />
+        <button type="submit">Learn more</button>
+      </form>
+      <!--Form for meditation tracker-->
+      <h2>Meditation Tracker</h2>
+      <section>
+        <form action="http://congratulations.com">
+          <input type="checkbox" id="meditation" name="done" />
+          <label for="meditaton">I meditated today</label>
+          <br />
+          <br />
+          <button>Submit</button>
+        </form>
+      </section>
     </main>
     <hr />
     <footer>
+      <section>
+        <!--
+            IMPORTANT: This will ONLY work IF the Gemini web application
+            (e.g., gemini.google.com/app) is designed to pick up
+            a query parameter named 'message' (or whatever its actual parameter is)
+            from the URL and pre-fill its chat input.
+            This is often NOT how sophisticated web apps work for initial input.
+        -->
+        <form action="/submit_to_gemini" method="POST">
+          <div>
+            <h3>Any Questions?</h3>
+            <textarea
+              id="qns"
+              name="user_message"
+              placeholder="Type here..."
+              rows="5"
+              cols="50"
+            ></textarea>
+          </div>
+          <br />
+          <button type="submit">Send</button>
+        </form>
+      </section>
       <p>
         &copy; 2023 Advaita Vedanta. All rights reserved.
         <br />

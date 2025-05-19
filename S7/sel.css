@@ -1,0 +1,28 @@
+/*UNIVERSAL SELECTOR: select everything - <div>, <img> like lit. everything lol*/
+* {
+    background-color: #F8F4E1;
+}
+
+/*ELEMENT SELECTORS BELOW*/
+img {
+    width: 100px;
+    height: 100px;  
+}
+
+button {    
+    color: #eae9e5;
+    background-color: #4E1F00;
+    font-size: 30px;
+}
+
+/*SELECTOR LIST: combine multiple selectors*/
+h1, h2 {
+    color: rgb(104, 114, 84);
+}
+
+/*id, for element = unique identifier*/
+/*don't have more than a handful on a page*/
+#signup {
+    background-color: red;
+    color: antiquewhite;
+}
